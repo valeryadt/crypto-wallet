@@ -1,0 +1,7 @@
+.nav__item {
+    @apply cursor-pointer border-transparent border-2 border-t-0 border-r-0 border-l-0 pb-1 pt-1 w-36
+}
+
+.nav__item__active {
+    @apply border-b-2 border-white/50 border-t-0 border-r-0 border-l-0
+}

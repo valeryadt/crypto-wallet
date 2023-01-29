@@ -1,0 +1,19 @@
+.header {
+    @apply pl-8 pr-8 bg-dark-blue w-full h-18 text-white  flex flex-row justify-between gap-20 items-center
+}
+
+.nav {
+    @apply flex flex-row justify-center items-center gap-2 font-bold
+}
+
+.nav__item {
+    @apply cursor-pointer border-transparent border-2 border-t-0 border-r-0 border-l-0 pb-1 pt-1 w-36
+}
+
+.nav__item__active {
+    @apply border-b-2 border-white/50 border-t-0 border-r-0 border-l-0
+}
+
+.panel {
+    @apply flex flex-row justify-center items-center gap-2 font-bold
+}

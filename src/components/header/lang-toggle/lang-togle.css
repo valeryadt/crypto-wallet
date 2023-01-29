@@ -1,0 +1,11 @@
+.toggle {
+    @apply  flex flex-row justify-center gap-2 items-center
+}
+
+.toggle__lang {
+    @apply  cursor-default
+}
+
+.toggle__arrow {
+    @apply text-2xl cursor-pointer
+}

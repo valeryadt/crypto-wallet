@@ -1,0 +1,8 @@
+.App {
+    /*@apply bg-dark-blue w-full h-full text-center*/
+    @apply text-center
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

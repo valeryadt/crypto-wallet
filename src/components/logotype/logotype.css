@@ -1,0 +1,11 @@
+.logo {
+    @apply flex flex-row justify-center items-center gap-2 cursor-default font-bold
+}
+
+.logo__icon {
+    @apply  text-2xl
+}
+
+.logo__name {
+    @apply  text-2xl
+}

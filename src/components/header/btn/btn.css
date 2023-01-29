@@ -1,0 +1,15 @@
+.login {
+    @apply bg-light-blue border-transparent
+}
+
+.login:hover {
+    @apply border-white transition duration-700 border-2
+}
+
+.registration {
+    @apply bg-transparent border-light-purple border-2
+}
+
+.registration:hover {
+    @apply border-white transition duration-700
+}

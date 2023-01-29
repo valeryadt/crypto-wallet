@@ -1,0 +1,39 @@
+.footer {
+    @apply w-full h-72 bg-extremely-dark-blue text-white  flex flex-col justify-evenly
+}
+
+.footer__body {
+    @apply flex flex-row justify-between pr-20 pl-20 items-start pt-10 gap-2 w-full h-full
+}
+
+.footer__block {
+    @apply flex flex-col justify-center items-center gap-4
+}
+
+.footer__block-name {
+    @apply font-bold text-xl pb-4 flex justify-start w-full
+}
+
+.footer__block-links {
+    @apply flex flex-col gap-1 w-full justify-start items-start text-white/50
+}
+
+.footer__block-link {
+    @apply text-sm cursor-pointer
+}
+
+.copyright {
+    @apply w-full flex flex-row justify-between items-center bg-super-extremely-dark-blue pr-20 pl-20 pt-4 pb-4
+}
+
+.copyright__text {
+    @apply text-xs text-left
+}
+
+.copyright__links {
+    @apply flex flex-row gap-2 text-2xl
+}
+
+.copyright__link {
+    @apply cursor-pointer
+}
