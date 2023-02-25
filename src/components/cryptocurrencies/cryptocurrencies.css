@@ -1,0 +1,31 @@
+.cryptocurrencies {
+    @apply pr-40 pl-40 pt-5 pb-5
+}
+
+.cryptocurrencies__container {
+    @apply  rounded-lg pt-4 pb-4 pl-6 pr-6 min-w-max bg-dark-gray
+}
+
+.cryptocurrencies__search {
+    @apply flex justify-end pb-4
+}
+
+.cryptocurrencies__input {
+    @apply bg-gray-600 p-1 rounded rounded-md text-white outline-0 hover:outline-0
+}
+
+.cryptocurrencies__table {
+    @apply table-auto w-full text-white
+}
+
+.cryptocurrencies__table-row {
+    @apply border-b-2 border border-white border-l-0 border-t-0 border-r-0
+}
+
+.cryptocurrencies__table-body {
+    @apply divide-y
+}
+
+.coin-headline {
+    @apply text-left
+}

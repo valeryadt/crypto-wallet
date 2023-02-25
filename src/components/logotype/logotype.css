@@ -7,5 +7,5 @@
 }
 
 .logo__name {
-    @apply  text-2xl
+    @apply  text-2xl select-none
 }

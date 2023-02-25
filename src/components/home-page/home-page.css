@@ -1,0 +1,39 @@
+.home {
+    @apply flex flex-row gap-2 w-full h-auto pr-24 pl-24  text-white pb-24 pt-20
+}
+
+.about {
+    @apply flex flex-col gap-2 items-start gap-12 pt-24
+}
+
+.about__text {
+    @apply flex flex-col items-start justify-start gap-2 w-lg
+}
+
+.about__text-title {
+    @apply text-4xl font-bold
+}
+
+.about__text-description {
+    @apply text-xl font-bold text-start
+}
+
+.home__currencies {
+    @apply flex flex-col gap-6 pt-10 pb-16 w-full
+}
+
+.home__bitcoin-container {
+    @apply flex flex-row justify-center
+}
+
+.home__tether-container {
+    @apply flex flex-row justify-start
+}
+
+.home__ethereum-container {
+    @apply  flex flex-row justify-end
+}
+
+.home__currency {
+    @apply border-2 border-white/70 rounded-md w-md h-28
+}

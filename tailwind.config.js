@@ -13,10 +13,20 @@ module.exports = {
         'light-blue': '#323acb',
         'light-purple': '#38387f',
         'perfect-blue': '#545acc',
-        'perfect-purple': '#202450'
+        'perfect-purple': '#202450',
+        'perfect-gray': '#1e293b',
+        'dark-gray':'#111827'
       },
       height: {
-        '18': '4.5rem'
+        '18': '4.5rem',
+        '14': '2.5rem'
+      },
+      width: {
+        'xs': '20rem',
+        'sm': '24rem',
+        'md': '28rem',
+        'lg': '32rem',
+        'xl': '36rem'
       },
       borderRadius: {
         'xl': '0.9rem'

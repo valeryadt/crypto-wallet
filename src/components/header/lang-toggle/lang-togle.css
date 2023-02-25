@@ -3,7 +3,7 @@
 }
 
 .toggle__lang {
-    @apply  cursor-default
+    @apply  cursor-default select-none
 }
 
 .toggle__arrow {

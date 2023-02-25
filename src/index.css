@@ -12,12 +12,12 @@ body {
 }
 
 body {
-  @apply bg-dark-blue
+  @apply bg-perfect-gray
 }
 
 @layer components {
   .btn {
-    @apply w-40 h-10 rounded-xl cursor-pointer
+    @apply w-40 h-10 rounded-xl cursor-pointer font-bold
   }
 }
 

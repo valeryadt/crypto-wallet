@@ -1,0 +1,11 @@
+.coin {
+    @apply h-18
+}
+
+.base-info__container {
+    @apply flex flex-row gap-2
+}
+
+.coin__img {
+    @apply w-6 h-6
+}

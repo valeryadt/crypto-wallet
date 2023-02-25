@@ -10,7 +10,7 @@ function NavItem({name}) {
 
     return (
         <div className={`nav__item ${activeState ? 'nav__item__active' : ''}`} onClick={handleClick}>
-            {name}
+           <p className="nav__item-name">{name}</p>
         </div>
     )
 }
