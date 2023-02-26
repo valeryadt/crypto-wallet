@@ -3,11 +3,8 @@ import CarbonFavorite from "./CarbonFavorite";
 import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
 
 
-function CoinItem(props) {
-    const {name, symbol, image, current_price, price_change_percentage_24h, total_volume, market_cap, sparkline_in_7d} = props.coins;
-    const {idx} = props;
+function CoinItem({name, symbol, image, current_price, price_change_percentage_24h, total_volume, market_cap, sparkline_in_7d, idx}) {
     const coin__price_change = price_change_percentage_24h < 0 ? "text-red-500" : "text-green-500";
-    console.log(sparkline_in_7d.price)
     return (
         <tr className="coin">
             <td className="coin__fav"><CarbonFavorite/></td>

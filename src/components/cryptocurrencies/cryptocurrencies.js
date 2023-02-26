@@ -1,12 +1,51 @@
 import './cryptocurrencies.css';
 import CoinItem from "./coin-item/coin-item";
-
+import Fuse from 'fuse.js'
+import {useEffect, useState} from "react";
 function Cryptocurrencies(props) {
+
+    const [coin, setCoin] = useState(props.coins);
+
+    useEffect(() => {
+        setCoin(props.coins);
+    }, [props.coins])
+
+    const searchData = (pattern) => {
+        const fuse = new Fuse(coin, {
+            keys: [
+                'name',
+                'symbol'
+            ],
+            includeScore: true
+        })
+
+        if (!pattern) {
+            setCoin(props.coins);
+            return;
+        }
+
+        const result = fuse.search(pattern);
+        const matches = [];
+        if (!result.length) {
+            setCoin([]);
+        } else {
+            result.forEach(({item}) => {
+                matches.push(item);
+            });
+            setCoin(matches);
+        }
+    };
+
     return (
         <div className="cryptocurrencies">
             <div className="cryptocurrencies__container">
                 <div className="cryptocurrencies__search">
-                    <input placeholder="Search crypto" className="cryptocurrencies__input" />
+                    <input
+                        placeholder="Search crypto"
+                        className="cryptocurrencies__input"
+                        type="text"
+                        onChange={(e) => searchData(e.target.value)}
+                         />
                 </div>
                 <table className="cryptocurrencies__table">
                     <thead>
@@ -23,12 +62,12 @@ function Cryptocurrencies(props) {
                     </tr>
                     </thead>
                     <tbody className="cryptocurrencies__table-body">
-                         {props.coins.map((coins, idx) => {
-                             const {id} = coins
-                             return (
-                                 <CoinItem key={id} coins={coins} idx={idx} />
-                             )
-                         })}
+                    {coin.map((coins, idx) => {
+                        const {id} = coins
+                        return (
+                            <CoinItem {...coins} key={id} idx={idx} />
+                        )
+                    })}
                     </tbody>
                 </table>
             </div>
