@@ -2,8 +2,24 @@
     @apply w-full h-72 bg-extremely-dark-blue text-white  flex flex-col justify-evenly
 }
 
+.footer__logo {
+    @apply pb-4 flex items-start w-full
+}
+
+.footer__link-location {
+    @apply text-start text-sm cursor-default
+}
+
+.footer__link-phone {
+    @apply cursor-default
+}
+
+.footer__about {
+    @apply text-sm w-40 h-auto text-justify font-medium text-white/70 cursor-default
+}
+
 .footer__body {
-    @apply flex flex-row justify-between pr-20 pl-20 items-start pt-10 gap-2 w-full h-full
+    @apply flex flex-row justify-between pr-20 pl-20 items-start pt-10 gap-2 w-full h-full pb-10
 }
 
 .footer__block {
@@ -11,7 +27,7 @@
 }
 
 .footer__block-name {
-    @apply font-bold text-xl pb-4 flex justify-start w-full
+    @apply font-bold text-xl pb-4 flex justify-start w-full cursor-default
 }
 
 .footer__block-links {
@@ -19,11 +35,31 @@
 }
 
 .footer__block-link {
-    @apply text-sm cursor-pointer
+    @apply text-sm
+}
+
+.footer__block-info {
+    @apply w-44 h-auto text-justify text-sm font-medium text-white/70 pb-3
+}
+
+.footer__input-container {
+    @apply relative w-full
+}
+
+.footer__input {
+    @apply w-44 rounded-3xl h-8 text-black pr-10 pl-2 outline-0
+}
+
+.footer__btn {
+    @apply absolute h-8 inset-y-0 right-0 pl-2 bg-gray-600/10 rounded-l-none rounded-3xl w-10
+}
+
+.footer__send-icon {
+    @apply text-perfect-blue text-xs text-center
 }
 
 .copyright {
-    @apply w-full flex flex-row justify-between items-center bg-super-extremely-dark-blue pr-20 pl-20 pt-4 pb-4
+    @apply w-full flex flex-row justify-between items-center bg-super-extremely-dark-blue pr-20 pl-20 pt-4 pb-4 border border-t-white/10 border-l-0 border-b-0 border-r-0
 }
 
 .copyright__text {
