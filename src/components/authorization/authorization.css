@@ -1,0 +1,46 @@
+.auth {
+    @apply bg-gradient-to-r from-dark-gray via-perfect-purple to-dark-blue gap-10 w-full flex text-white justify-evenly items-center
+}
+
+.auth__form {
+    @apply bg-transparent w-xs flex flex-col gap-4 justify-center items-center
+}
+
+.auth__form-header {
+    @apply text-4xl font-extrabold
+}
+
+.auth__form-text {
+    @apply text-xl
+}
+
+.auth__form-greeting {
+    @apply flex flex-row gap-2 pt-1 justify-center items-center
+}
+.auth__input-forms {
+    @apply flex flex-col gap-2 w-full justify-center items-start
+}
+
+.auth__input-name {
+    @apply text-2xl font-semibold
+}
+
+.auth__input {
+    @apply w-full  text-black rounded-xl h-9 p-2 outline-0
+}
+
+.auth__btn {
+    @apply mt-2
+}
+
+.auth__router {
+    @apply text-start text-sm w-full
+}
+
+.auth__link {
+    @apply hover:text-perfect-blue font-bold
+}
+
+.auth__img {
+    @apply w-full
+}

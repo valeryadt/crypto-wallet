@@ -47,7 +47,7 @@
 }
 
 .footer__input {
-    @apply w-44 rounded-3xl h-8 text-black pr-10 pl-2 outline-0
+    @apply w-44 rounded-3xl h-8 text-black pr-10 pl-2 pt-2 pb-2 outline-0
 }
 
 .footer__btn {
