@@ -34,7 +34,15 @@
 }
 
 .auth__link {
-    @apply hover:text-perfect-blue font-bold
+    @apply hover:text-perfect-blue font-bold transition duration-500
+}
+
+.auth__btn-container {
+    @apply flex justify-start w-full
+}
+
+.auth__btn {
+    @apply transition ease-in-out delay-150 bg-light-blue hover:-translate-y-1 hover:scale-110 hover:bg-perfect-blue duration-300 border-none
 }
 
 .auth__img {
