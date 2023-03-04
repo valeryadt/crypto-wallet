@@ -1,5 +1,5 @@
 .registry {
-    @apply bg-gradient-to-r from-dark-gray via-perfect-purple to-dark-blue gap-10 w-full flex text-white justify-evenly items-center
+    @apply bg-gradient-to-br from-dark-gray via-perfect-purple to-dark-blue gap-10 w-full flex text-white justify-evenly items-center
 }
 
 .registry__description {

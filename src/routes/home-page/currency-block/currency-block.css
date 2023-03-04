@@ -1,0 +1,47 @@
+.currency-block {
+    @apply border-2 border-white/70 rounded-md w-md h-28 pt-4 pr-4 pb-4 relative
+}
+
+.crypto-balance {
+    @apply flex flex-row gap-3 justify-between items-center pl-8
+}
+
+.crypto-block__sparkline {
+    @apply opacity-10 absolute bottom-0
+}
+
+.crypto-block__img-container {
+    @apply absolute -left-5 bottom-8 shadow-5xl rounded rounded-full
+}
+
+.crypto-block__img {
+    @apply h-10 w-10 rounded rounded-full
+}
+
+.crypto-balance__numbers {
+    @apply flex flex-col w-44 gap-2 justify-center items-start
+}
+
+.crypto-balance__exchange {
+    @apply font-bold flex flex-row gap-1
+}
+
+.crypto-balance__price-change {
+    @apply flex flex-row gap-1
+}
+
+.crypto-balance__revers-exchange {
+    @apply flex flex-col gap-1 items-start justify-center
+}
+
+.crypto-balance__bitcoin-container {
+    @apply flex flex-row justify-center
+}
+
+.crypto-balance__tether-container {
+    @apply flex flex-row justify-start
+}
+
+.crypto-balance__ethereum-container {
+    @apply  flex flex-row justify-end
+}

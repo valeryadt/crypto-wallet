@@ -1,7 +1,8 @@
 import './app.css'
 import Header from "../header/header";
 import Footer from "../footer/footer";
-import HomePage from "../home-page/home-page";
+import { Routes, Route } from "react-router-dom"
+import HomePage from "../../routes/home-page/home-page";
 import axios from "axios";
 import {useState, useEffect} from "react";
 import Cryptocurrencies from "../cryptocurrencies/cryptocurrencies";
@@ -35,11 +36,13 @@ function App() {
     return (
         <div className="App">
             <Header />
-            {/*<HomePage/>*/}
+            {/*<Routes>*/}
+            <HomePage coins={coins} />
             {/*<CryptoNews />*/}
             {/*<Cryptocurrencies coins={coins} />*/}
-            <Registration />
+            {/*<Registration />*/}
             {/*<Authorization />*/}
+            {/*</Routes>*/}
             <Footer/>
         </div>
     )

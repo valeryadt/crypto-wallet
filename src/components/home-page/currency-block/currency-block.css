@@ -1,7 +1,0 @@
-.currency-block {
-    @apply border-2 border-white/70 rounded-md w-md h-28
-}
-
-.crypto-balance {
-    @apply flex flex-col gap-2
-}
