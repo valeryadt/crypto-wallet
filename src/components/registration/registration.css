@@ -1,0 +1,59 @@
+.registry {
+    @apply bg-gradient-to-r from-dark-gray via-perfect-purple to-dark-blue gap-10 w-full flex text-white justify-evenly items-center
+}
+
+.registry__description {
+    @apply text-xl text-start pt-2 font-semibold
+}
+
+.registry__form {
+    @apply bg-transparent w-xs flex flex-col gap-4 justify-center items-center
+}
+
+.registry__btn-container {
+    @apply flex justify-start w-full
+}
+
+.registry__form-header {
+    @apply text-4xl font-extrabold
+}
+
+.registry__form-text {
+    @apply text-xl
+}
+
+.registry__form-greeting {
+    @apply flex flex-row gap-2 pt-1 justify-center items-center
+}
+
+.registry__input-forms {
+    @apply flex flex-col gap-2 w-full justify-center items-start
+}
+
+.registry__checkbox-forms {
+    @apply flex flex-row gap-2 w-full  items-start text-start text-sm
+}
+
+.registry__input-name {
+    @apply text-2xl font-semibold
+}
+
+.registry__input {
+    @apply w-full  text-black rounded-xl h-9 p-2 outline-0
+}
+
+.registry__router {
+    @apply text-start text-sm w-full
+}
+
+.registry__link {
+    @apply hover:text-perfect-blue font-bold transition duration-500
+}
+
+.registry__img {
+    @apply w-full
+}
+
+.registry__btn {
+    @apply transition ease-in-out delay-150 bg-light-blue hover:-translate-y-1 hover:scale-110 hover:bg-perfect-blue duration-300 border-none
+}

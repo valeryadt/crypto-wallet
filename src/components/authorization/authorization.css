@@ -29,10 +29,6 @@
     @apply w-full  text-black rounded-xl h-9 p-2 outline-0
 }
 
-.auth__btn {
-    @apply mt-2
-}
-
 .auth__router {
     @apply text-start text-sm w-full
 }

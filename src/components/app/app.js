@@ -7,6 +7,7 @@ import {useState, useEffect} from "react";
 import Cryptocurrencies from "../cryptocurrencies/cryptocurrencies";
 import CryptoNews from "../crypto-news/crypto-news";
 import Authorization from "../authorization/authorization";
+import Registration from "../registration/registration";
 
 function App() {
 
@@ -37,7 +38,8 @@ function App() {
             {/*<HomePage/>*/}
             {/*<CryptoNews />*/}
             {/*<Cryptocurrencies coins={coins} />*/}
-            <Authorization />
+            <Registration />
+            {/*<Authorization />*/}
             <Footer/>
         </div>
     )
