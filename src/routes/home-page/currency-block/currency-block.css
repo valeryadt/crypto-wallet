@@ -11,7 +11,7 @@
 }
 
 .crypto-block__img-container {
-    @apply absolute -left-5 bottom-8 shadow-5xl rounded rounded-full
+    @apply absolute -left-5 bottom-8 rounded rounded-full
 }
 
 .crypto-block__img {
@@ -31,7 +31,7 @@
 }
 
 .crypto-balance__revers-exchange {
-    @apply flex flex-col gap-1 items-start justify-center
+    @apply flex flex-col gap-1 items-start justify-center font-bold
 }
 
 .crypto-balance__bitcoin-container {

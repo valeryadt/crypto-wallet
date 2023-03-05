@@ -37,9 +37,9 @@ function App() {
         <div className="App">
             <Header />
             {/*<Routes>*/}
-            {/*<HomePage coins={coins} />*/}
+            <HomePage coins={coins} />
             {/*<CryptoNews />*/}
-            <Cryptocurrencies coins={coins} />
+            {/*<Cryptocurrencies coins={coins} />*/}
             {/*<Registration />*/}
             {/*<Authorization />*/}
             {/*</Routes>*/}
