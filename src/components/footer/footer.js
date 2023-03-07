@@ -42,7 +42,7 @@ function Footer() {
                         <div className="footer__block-info">Keep up with our latest news and events. Subscribe to our newsletter!</div>
                         <div className="footer__input-container">
                             <input type="email"
-                                   placeholder="Your Email..."
+                                   placeholder="example@gmail.com"
                                    className="footer__input"/>
                             <button
                                 type="submit"

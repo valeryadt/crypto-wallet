@@ -15,7 +15,18 @@ function App() {
     const [coins, setCoins] = useState([]);
     const [news, setNews] = useState([])
     const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=true';
-    const urlNews = ''
+    const urlNews = 'https://www.bing.com/news/search?q=top+stories&form=TNSA02'
+
+    const options = {
+        method: 'GET',
+        url: 'https://bing-news-search1.p.rapidapi.com/news/search',
+        params: {q: 'crypto', freshness: 'Day', textFormat: 'Raw', safeSearch: 'Off', originalImg: 'true'},
+        headers: {
+            'X-BingApis-SDK': 'true',
+            'X-RapidAPI-Key': '96d03489camsh4c4b5faacb33544p192f4fjsn7743982491d8',
+            'X-RapidAPI-Host': 'bing-news-search1.p.rapidapi.com'
+        }
+    };
 
     useEffect(() => {
         axios.get(url).then((response) => {
@@ -23,22 +34,21 @@ function App() {
         }).catch((error) => {
             console.log(error)
         })
-    }, [])
 
-    useEffect(() => {
-        axios.get(url).then((response) => {
-            setCoins(response.data)
-        }).catch((error) => {
-            console.log(error)
-        })
+
+        axios.request(options).then(function (response) {
+            setNews(response.data);
+        }).catch(function (error) {
+            console.error(error, 'error');
+        });
     }, [])
 
     return (
         <div className="App">
             <Header />
             {/*<Routes>*/}
-            <HomePage coins={coins} />
-            {/*<CryptoNews />*/}
+            {/*<HomePage coins={coins} />*/}
+            <CryptoNews news={news} />
             {/*<Cryptocurrencies coins={coins} />*/}
             {/*<Registration />*/}
             {/*<Authorization />*/}

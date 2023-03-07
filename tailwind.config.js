@@ -18,7 +18,7 @@ module.exports = {
         'dark-gray':'#111827',
         'btc': '#f7931a',
         'eth': '#627eea',
-        'usdt': '#26a17b'
+        'usdt': '#26a17b',
       },
       height: {
         '18': '4.5rem',
@@ -29,7 +29,9 @@ module.exports = {
         'sm': '24rem',
         'md': '28rem',
         'lg': '32rem',
-        'xl': '36rem'
+        'xl': '36rem',
+        '82': '22rem',
+        '86': '26rem'
       },
       borderRadius: {
         'xl': '0.9rem'

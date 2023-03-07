@@ -4,6 +4,8 @@ import Fuse from 'fuse.js'
 import {useEffect, useState} from "react";
 function Cryptocurrencies(props) {
 
+    // console.log(props.coins)
+
     const [coin, setCoin] = useState(props.coins);
 
     useEffect(() => {

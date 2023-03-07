@@ -1,0 +1,15 @@
+.card {
+    @apply w-full rounded-lg p-4 bg-dark-gray border-2 border-white/20 flex flex-col gap-2 hover:scale-105 ease-out duration-300
+}
+
+.card__title {
+    @apply text-lg font-bold text-justify text-ellipsis truncate
+}
+
+.card__description {
+    @apply text-justify text-sm font-medium
+}
+
+.card__img {
+    @apply rounded-lg w-80 h-40
+}

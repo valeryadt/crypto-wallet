@@ -11,15 +11,15 @@ function Registration() {
                     </div>
                     <div className="registry__input-forms">
                         <div className="registry__input-name">Email</div>
-                        <input type="text" placeholder="Your Email" className="registry__input"/>
+                        <input type="text" placeholder="example@gmail.com" className="registry__input"/>
                     </div>
                     <div className="registry__input-forms">
                         <div  className="registry__input-name">Password</div>
-                        <input type="password" placeholder="Your Password" className="registry__input"/>
+                        <input type="password" placeholder="password" className="registry__input"/>
                     </div>
                     <div className="registry__input-forms">
                         <div  className="registry__input-name">Repeat password</div>
-                        <input type="password" placeholder="Repeat your Password" className="registry__input"/>
+                        <input type="password" placeholder="repeat password" className="registry__input"/>
                     </div>
                     <div className="registry__checkbox-forms">
                         <input type="checkbox" id="accept"/>

@@ -1,0 +1,19 @@
+.cryptonews {
+    @apply pr-40 pl-40 pt-5 pb-5 bg-gradient-to-b from-dark-blue to-perfect-purple
+}
+
+.cryptonews__container {
+    @apply bg-dark-gray text-white flex flex-col gap-4 p-8 rounded rounded-xl
+}
+
+.cryptonews__title {
+    @apply text-4xl font-bold text-left
+}
+
+.cryptonews__description {
+    @apply text-left text-lg
+}
+
+.cryptonews__news {
+    @apply grid gap-3 md:grid-cols-2 xl:grid-cols-3 sm:grid-cols-1 w-full
+}

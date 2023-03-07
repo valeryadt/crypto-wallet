@@ -14,11 +14,11 @@ function Authorization() {
                     </div></div>
                 <div className="auth__input-forms">
                     <div className="auth__input-name">Email</div>
-                <input type="text" placeholder="Your Email" className="auth__input"/>
+                <input type="text" placeholder="example@gmail.com" className="auth__input"/>
                 </div>
                 <div className="auth__input-forms">
                     <div  className="auth__input-name">Password</div>
-                <input type="password" placeholder="Your Password" className="auth__input"/>
+                <input type="password" placeholder="password" className="auth__input"/>
                 </div>
                 <div className="auth__btn-container">
                 <Btn text="Sign in" styling="btn login auth__btn"/>
