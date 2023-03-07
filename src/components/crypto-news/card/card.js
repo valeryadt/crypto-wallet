@@ -2,7 +2,7 @@ import './card.css'
 import Btn from "../../header/btn/btn";
 
 function Card(props) {
-    const {name, description, image} = props.news
+    const {name, description, image, url} = props.news
     console.log(props.news)
     return (
         <div className="card">
@@ -14,7 +14,7 @@ function Card(props) {
                 <p>{description.slice(0, 150).trim() + '...'}</p>
             </div>
             <div>
-                <Btn text={"Read more"} styling="btn login" />
+                <Btn text={"Read more"} styling="btn login" link={url} />
             </div>
         </div>
     )

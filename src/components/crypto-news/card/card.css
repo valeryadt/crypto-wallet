@@ -7,7 +7,7 @@
 }
 
 .card__description {
-    @apply text-justify text-sm font-medium
+    @apply text-justify text-sm font-medium text-white/70
 }
 
 .card__img {
