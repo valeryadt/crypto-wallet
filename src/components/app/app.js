@@ -9,14 +9,15 @@ import Cryptocurrencies from "../cryptocurrencies/cryptocurrencies";
 import CryptoNews from "../crypto-news/crypto-news";
 import Authorization from "../authorization/authorization";
 import Registration from "../registration/registration";
+import Trending from "../trending/trending";
 
 function App() {
 
     const [coins, setCoins] = useState([]);
-    const [news, setNews] = useState([])
+    const [news, setNews] = useState([]);
+    const [trending, setTrending] = useState([])
     const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=true';
-    const urlNews = 'https://www.bing.com/news/search?q=top+stories&form=TNSA02'
-
+    const trendingUrl = 'https://api.coingecko.com/api/v3/search/trending'
     const options = {
         method: 'GET',
         url: 'https://bing-news-search1.p.rapidapi.com/news/search',
@@ -35,24 +36,28 @@ function App() {
             console.log(error)
         })
 
-
         axios.request(options).then(function (response) {
             setNews(response.data);
         }).catch(function (error) {
             console.error(error, 'error');
         });
+
+        axios.get(trendingUrl).then((response) => {
+            setTrending(response.data)
+        }).catch((error) => {
+            console.log(error)
+        })
     }, [])
 
     return (
         <div className="App">
             <Header />
-            {/*<Routes>*/}
             {/*<HomePage coins={coins} />*/}
-            <CryptoNews news={news} />
+            {/*<CryptoNews news={news} />*/}
+            <Trending trending={trending} />
             {/*<Cryptocurrencies coins={coins} />*/}
             {/*<Registration />*/}
             {/*<Authorization />*/}
-            {/*</Routes>*/}
             <Footer/>
         </div>
     )

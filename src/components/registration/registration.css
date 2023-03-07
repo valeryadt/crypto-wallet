@@ -11,7 +11,7 @@
 }
 
 .registry__btn-container {
-    @apply flex justify-start w-full
+    @apply w-full
 }
 
 .registry__form-header {
@@ -55,5 +55,5 @@
 }
 
 .registry__btn {
-    @apply transition ease-in-out delay-150 bg-light-blue hover:-translate-y-1 hover:scale-110 hover:bg-perfect-blue duration-300 border-none
+    @apply w-full transition ease-in-out delay-150 bg-light-blue hover:-translate-y-1 hover:scale-110 hover:bg-perfect-blue duration-300 border-none
 }

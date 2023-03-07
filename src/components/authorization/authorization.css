@@ -38,11 +38,11 @@
 }
 
 .auth__btn-container {
-    @apply flex justify-start w-full
+    @apply w-full mt-2
 }
 
 .auth__btn {
-    @apply transition ease-in-out delay-150 bg-light-blue hover:-translate-y-1 hover:scale-110 hover:bg-perfect-blue duration-300 border-none
+    @apply transition w-full ease-in-out delay-150 bg-light-blue hover:-translate-y-1 hover:scale-110 hover:bg-perfect-blue duration-300 border-none
 }
 
 .auth__img {

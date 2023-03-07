@@ -15,11 +15,11 @@ function Registration() {
                     </div>
                     <div className="registry__input-forms">
                         <div  className="registry__input-name">Password</div>
-                        <input type="password" placeholder="password" className="registry__input"/>
+                        <input type="password" placeholder="********" className="registry__input"/>
                     </div>
                     <div className="registry__input-forms">
                         <div  className="registry__input-name">Repeat password</div>
-                        <input type="password" placeholder="repeat password" className="registry__input"/>
+                        <input type="password" placeholder="********" className="registry__input"/>
                     </div>
                     <div className="registry__checkbox-forms">
                         <input type="checkbox" id="accept"/>
@@ -30,7 +30,7 @@ function Registration() {
                         <label htmlFor="notify">Please notify me about new features and special offers.</label>
                     </div>
                     <div className="registry__btn-container">
-                    <Btn text="Sign in" styling="btn login registry__btn"/>
+                    <Btn text="Sign up" styling="btn login registry__btn"/>
                     </div>
                     <div className="registry__router">
                         <p>Already have an account? <a href="#" className="registry__link">Login now!</a></p>

@@ -3,7 +3,7 @@
 }
 
 .login:hover {
-    @apply border-white/75 transition duration-700 border-2
+    @apply border-white/50 transition duration-700 border-2
 }
 
 .registration {
@@ -11,7 +11,7 @@
 }
 
 .registration:hover {
-    @apply border-white/75 transition duration-700
+    @apply border-white/50 transition duration-700
 }
 
 .start {
@@ -19,5 +19,5 @@
 }
 
 .start:hover {
-    @apply border-white/75 transition duration-700 border-2
+    @apply border-white/50 transition duration-700 border-2
 }
