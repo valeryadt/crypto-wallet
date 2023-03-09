@@ -1,5 +1,5 @@
 .cryptonews {
-    @apply pr-40 pl-40 pt-10 pb-10 bg-gradient-to-b from-dark-blue to-perfect-purple
+    @apply pr-32 pl-32 pt-10 pb-10 bg-gradient-to-b from-dark-blue via-perfect-purple to-dark-blue
 }
 
 .cryptonews__container {

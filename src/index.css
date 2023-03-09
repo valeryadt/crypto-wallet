@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  @apply bg-perfect-gray
+  @apply bg-dark-blue
 }
 
 @layer components {
