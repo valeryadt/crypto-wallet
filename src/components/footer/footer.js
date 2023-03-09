@@ -21,16 +21,16 @@ function Footer() {
                 <div className="footer__block">
                     <div className="footer__block-name">Contact Info</div>
                     <div className="footer__block-links">
-                        <div className="footer__block-link footer__link-location">Location: Moscow, Russia</div>
-                        <div className="footer__block-link">Email: finvers@test.ru</div>
-                        <div className="footer__block-link footer__link-phone">Office: +7 900 000 00 00</div>
+                        <div className="footer__link-location">Location: Moscow, Russia</div>
+                        <div className="footer__link-email">Email: finvers@test.ru</div>
+                        <div className="footer__link-phone">Office: +7 900 000 00 00</div>
                     </div>
                 </div>
                 <div className="footer__block">
                     <div className="footer__block-name">Fast Links</div>
                     <div className="footer__block-links">
                         <div className="footer__block-link"><a href="#">Home</a></div>
-                        <div className="footer__block-link"><a href="#">About Us</a></div>
+                        <div className="footer__block-link"><a href="#">Contact Us</a></div>
                         <div className="footer__block-link"><a href="#">Cryptocurrencies</a></div>
                         <div className="footer__block-link"><a href="#">Crypto News</a></div>
                         <div className="footer__block-link"><a href="#">My Account</a></div>
@@ -56,11 +56,11 @@ function Footer() {
             <div className="copyright">
                 <div className="copyright__text">Copyright ©2022 All rights reserved</div>
                 <div className="copyright__links">
-                    <EiScGithub className="copyright__link"/>
-                    <EiScLinkedin className="copyright__link" />
-                    <EiScVk className="copyright__link" />
-                    <EiScTelegram className="copyright__link" />
-                    <EiScYoutube className="copyright__link" />
+                    <a className="copyright__link" href="https://github.com/valeryadt"><EiScGithub /></a>
+                    <a className="copyright__link"><EiScLinkedin /></a>
+                    <a className="copyright__link"><EiScVk /></a>
+                    <a className="copyright__link"><EiScTelegram /></a>
+                    <a className="copyright__link"><EiScYoutube /></a>
 
                 </div>
             </div>

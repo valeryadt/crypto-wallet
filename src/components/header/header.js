@@ -13,7 +13,7 @@ function Header() {
             </div>
             <div className="nav">
                 <NavItem name="Home"  />
-                <NavItem name="About Us" />
+                <NavItem name="Contact Us" />
                 <NavItem name="Cryptocurrencies" />
                 <NavItem name="Trending" />
                 <NavItem name="Crypto News" />

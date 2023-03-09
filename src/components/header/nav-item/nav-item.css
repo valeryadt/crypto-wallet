@@ -1,5 +1,5 @@
 .nav__item {
-    @apply text-white/60 select-none
+    @apply text-white/70 select-none hover:text-white transition
 }
 
 .nav__item__active {

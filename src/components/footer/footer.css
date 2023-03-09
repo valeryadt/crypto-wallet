@@ -31,11 +31,11 @@
 }
 
 .footer__block-links {
-    @apply flex flex-col gap-1 w-full justify-start items-start text-white/50
+    @apply flex flex-col gap-1 w-full justify-start items-start text-white/50 text-sm
 }
 
 .footer__block-link {
-    @apply text-sm
+    @apply text-sm hover:text-white/80 transition
 }
 
 .footer__block-info {
@@ -63,7 +63,7 @@
 }
 
 .copyright__text {
-    @apply text-xs text-left
+    @apply text-xs text-left text-white/70 cursor-default
 }
 
 .copyright__links {
@@ -71,5 +71,5 @@
 }
 
 .copyright__link {
-    @apply cursor-pointer
+    @apply cursor-pointer text-white/70 hover:text-white transition
 }
