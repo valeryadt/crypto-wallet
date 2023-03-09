@@ -2,6 +2,12 @@ import './contact-us.css';
 import Btn from "../header/btn/btn";
 import {useRef} from "react";
 import emailjs from '@emailjs/browser';
+import IonMdMail from "./icones/IonMdMail";
+import MdiPhone from "./icones/MdiPhone";
+import Fa6SolidLocationDot from "./icones/Fa6SolidLocationDot";
+import EiScGithub from "../footer/icones/EiScGithub";
+import EiScTelegram from "../footer/icones/EiScTelegram";
+import EiScVk from "../footer/icones/EiScVk";
 
 function ContactUs() {
     const form = useRef()
@@ -19,14 +25,8 @@ function ContactUs() {
 
     return (
         <div className="contact">
-            <div className="contact__forms">
-                <div className="contact__form-header">
-                    Contact us
-                    <div className="contact__form-greeting">
-                        <div className="contact__form-text">Our friendly team would love to hear from you!</div>
-                    </div>
-                </div>
-                <div className="contact__form-container">
+            <div className="contact__container flex flex-row-reverse w-full justify-between gap-5">
+                <div className="contact__forms pr-24">
                     <form ref={form} onSubmit={sendEmail} className="contact__form">
                         <div className="contact__input-name">
                             Full name
@@ -70,9 +70,45 @@ function ContactUs() {
                         </div>
                     </form>
                 </div>
-            </div>
-            <div className="contact__img-container">
-                <img src="/img/contact.png" className="contact__img" alt=""/>
+                <div className="contact__description-container">
+                    <div className="contact__title">
+                        Contact us
+                        <div className="contact__description">
+                            <div className="contact__form-text">Our friendly team would love to hear from you!</div>
+                        </div>
+                    </div>
+                    <div className="contact__information">
+                        <div className="contact__icon-container">
+                            <IonMdMail className="contact__icon"/>
+                            <div className="contact__information-text">finvers.company@yandex.ru</div>
+                        </div>
+                        <div className="contact__icon-container">
+                            <MdiPhone className="contact__icon"/>
+                            <div className="contact__information-text">+7 900 000 00 00</div>
+                        </div>
+                        <div className="contact__icon-container">
+                            <Fa6SolidLocationDot className="contact__icon"/>
+                            <div className="contact__information-text">Moscow, Russia</div>
+                        </div>
+                    </div>
+                    <div className="contact__sm-container">
+                        <div className="contact__sm">
+                            <a className="contact__sm-link">
+                                <EiScGithub className="contact__sm-icon"/>
+                            </a>
+                        </div>
+                        <div className="contact__sm">
+                            <a className="contact__sm-link">
+                                <EiScTelegram className="contact__sm-icon"/>
+                            </a>
+                        </div>
+                        <div className="contact__sm">
+                            <a className="contact__sm-link">
+                                <EiScVk className="contact__sm-icon"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
