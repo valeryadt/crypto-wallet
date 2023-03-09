@@ -5,7 +5,7 @@ function TrendingCard(props) {
     const {small, name, symbol, price_btc, market_cap_rank, score} = props.item
     console.log(props)
     return (
-        <a href="#">
+        <a href="src/components/cryptocurrencies/trending/trending-card#">
         <div className="trending-card">
             <div className="trending-card__info">
                 <div className="trending-card__img-container">

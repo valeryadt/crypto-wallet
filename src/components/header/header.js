@@ -15,7 +15,6 @@ function Header() {
                 <NavItem name="Home"  />
                 <NavItem name="Contact Us" />
                 <NavItem name="Cryptocurrencies" />
-                <NavItem name="Trending" />
                 <NavItem name="Crypto News" />
             </div>
             <div className={"panel"}>

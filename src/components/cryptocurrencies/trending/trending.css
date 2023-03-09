@@ -1,6 +1,4 @@
-.trending {
-    @apply pr-32 pl-32 pt-5 pb-5 bg-gradient-to-r from-dark-blue to-perfect-purple
-}
+
 
 .trending__container {
     @apply bg-dark-gray text-white rounded rounded-xl p-8 flex flex-col gap-4

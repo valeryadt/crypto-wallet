@@ -2,6 +2,8 @@ import './cryptocurrencies.css';
 import CoinItem from "./coin-item/coin-item";
 import Fuse from 'fuse.js'
 import {useEffect, useState} from "react";
+import Trending from "./trending/trending";
+
 function Cryptocurrencies(props) {
 
     // console.log(props.coins)
@@ -47,7 +49,7 @@ function Cryptocurrencies(props) {
                         className="cryptocurrencies__input"
                         type="text"
                         onChange={(e) => searchData(e.target.value)}
-                         />
+                    />
                 </div>
                 <table className="cryptocurrencies__table">
                     <thead>
@@ -67,11 +69,14 @@ function Cryptocurrencies(props) {
                     {coin.map((coins, idx) => {
                         const {id} = coins
                         return (
-                            <CoinItem {...coins} key={id} idx={idx} />
+                            <CoinItem {...coins} key={id} idx={idx}/>
                         )
                     })}
                     </tbody>
                 </table>
+            </div>
+            <div className="cryptocurrencies__trending">
+                <Trending trending={props.trending}/>
             </div>
         </div>
     )
