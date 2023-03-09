@@ -6,7 +6,7 @@ function HomePage(props) {
 
     const updateCoins = props.coins.slice(0, 3)
     return (
-        <div className="home home__bg" >
+        <div className="home home__bg">
             <div className="about">
                 <div className="about__text">
                     <p className="about__text-title">CryptoWallet</p>
@@ -20,7 +20,7 @@ function HomePage(props) {
                 {updateCoins.map(coins => {
                     const {id} = coins
                     return (
-                        <CurrencyBlock key={id} coins={coins} />
+                        <CurrencyBlock key={id} coins={coins}/>
                     )
                 })}
             </div>

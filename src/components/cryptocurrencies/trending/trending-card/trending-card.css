@@ -1,5 +1,5 @@
 .trending-card {
-    @apply w-full rounded-xl p-3 h-32 cursor-pointer bg-dark-gray border-2 border-white/10 flex flex-row justify-between gap-4 hover:scale-105 ease-out duration-300
+    @apply w-full rounded-xl p-3 h-32 cursor-pointer bg-dark-gray border border-white/10 flex flex-row justify-between gap-4 hover:scale-105 ease-out duration-300
 }
 
 .trending-card__info {

@@ -10,18 +10,18 @@ function Authorization() {
                     Sign in
                     <div className="auth__form-greeting">
                         <div className="auth__form-text">Welcome back to</div>
-                        <Logotype />
+                        <Logotype/>
                     </div></div>
                 <div className="auth__input-forms">
                     <div className="auth__input-name">Email</div>
-                <input type="text" placeholder="example@gmail.com" className="auth__input"/>
+                    <input type="text" placeholder="example@gmail.com" className="auth__input"/>
                 </div>
                 <div className="auth__input-forms">
-                    <div  className="auth__input-name">Password</div>
-                <input type="password" placeholder="********" className="auth__input"/>
+                    <div className="auth__input-name">Password</div>
+                    <input type="password" placeholder="********" className="auth__input"/>
                 </div>
                 <div className="auth__btn-container">
-                <Btn text="Sign in" styling="btn login auth__btn"/>
+                    <Btn text="Sign in" styling="btn login auth__btn"/>
                 </div>
                 <div className="auth__router">
                     <p>Don't have an account? <a href="#" className="auth__link">Register now!</a></p>

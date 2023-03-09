@@ -26,7 +26,7 @@
 }
 
 .auth__input {
-    @apply w-full  text-black rounded-xl h-9 p-2 outline-0
+    @apply w-full  text-black rounded-xl h-10 p-2 outline-0
 }
 
 .auth__router {

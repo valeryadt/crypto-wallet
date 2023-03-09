@@ -9,6 +9,7 @@ import Cryptocurrencies from "../cryptocurrencies/cryptocurrencies";
 import CryptoNews from "../crypto-news/crypto-news";
 import Authorization from "../authorization/authorization";
 import Registration from "../registration/registration";
+import ContactUs from "../contact-us/contact-us";
 
 function App() {
 
@@ -52,8 +53,9 @@ function App() {
         <div className="App">
             <Header />
             {/*<HomePage coins={coins} />*/}
+            <ContactUs />
             {/*<CryptoNews news={news} />*/}
-            <Cryptocurrencies coins={coins} trending={trending} />
+            {/*<Cryptocurrencies coins={coins} trending={trending} />*/}
             {/*<Registration />*/}
             {/*<Authorization />*/}
             <Footer/>

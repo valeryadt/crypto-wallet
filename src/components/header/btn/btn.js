@@ -1,9 +1,9 @@
 import './btn.css'
 
-function Btn({text, styling, link}) {
+function Btn({text, styling, link, type}) {
     return (
         <div>
-            <button className={styling}><a href={link}>{text}</a></button>
+            <button className={styling} type={type}><a href={link}>{text}</a></button>
         </div>
     )
 }

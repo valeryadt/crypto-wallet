@@ -1,5 +1,5 @@
 .card {
-    @apply w-full rounded-lg p-4 bg-dark-gray border-2 border-white/10 flex flex-col gap-2 hover:scale-105 ease-out duration-300
+    @apply w-full rounded-lg p-4 bg-dark-gray border border-white/10 flex flex-col gap-2 hover:scale-105 ease-out duration-300
 }
 
 .card__title {

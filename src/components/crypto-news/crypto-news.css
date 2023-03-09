@@ -1,9 +1,9 @@
 .cryptonews {
-    @apply pr-40 pl-40 pt-5 pb-5 bg-gradient-to-b from-dark-blue to-perfect-purple
+    @apply pr-40 pl-40 pt-10 pb-10 bg-gradient-to-b from-dark-blue to-perfect-purple
 }
 
 .cryptonews__container {
-    @apply bg-dark-gray text-white flex flex-col gap-4 p-8 rounded rounded-xl
+    @apply bg-dark-gray text-white flex flex-col gap-4 p-8 rounded rounded-xl shadow-lg
 }
 
 .cryptonews__title {
@@ -11,7 +11,7 @@
 }
 
 .cryptonews__description {
-    @apply text-left text-lg
+    @apply text-left text-lg text-white/70
 }
 
 .cryptonews__news {

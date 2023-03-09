@@ -14,9 +14,9 @@ function Trending(props) {
                 </div>
                 <div className="trending__cards">
                     {props.trending.coins !== undefined && props.trending.coins.map((trending, idx) => {
-                       return (
-                        <TrendingCard {...trending} key={idx} />
-                       )
+                        return (
+                            <TrendingCard {...trending} key={idx}/>
+                        )
                     })}
                 </div>
             </div>

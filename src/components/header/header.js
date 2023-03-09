@@ -12,13 +12,13 @@ function Header() {
                 <Logotype/>
             </div>
             <div className="nav">
-                <NavItem name="Home"  />
-                <NavItem name="Contact Us" />
-                <NavItem name="Cryptocurrencies" />
-                <NavItem name="Crypto News" />
+                <NavItem name="Home"/>
+                <NavItem name="Contact Us"/>
+                <NavItem name="Cryptocurrencies"/>
+                <NavItem name="Crypto News"/>
             </div>
             <div className={"panel"}>
-                <LangToggle lang="English" />
+                <LangToggle lang="English"/>
                 <Btn text="Sign up" styling="btn registration"/>
                 <Btn text="Login" styling="btn login"/>
             </div>

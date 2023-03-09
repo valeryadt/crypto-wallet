@@ -12,7 +12,7 @@ function Footer() {
         <div className="footer">
             <div className="footer__body">
                 <div className="footer__block">
-                    <div className="footer__logo"><Logotype /></div>
+                    <div className="footer__logo"><Logotype/></div>
                     <div className="footer__about">Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit. Vivamus ut interdum magna, ac
                         scelerisque sapien.
@@ -39,7 +39,9 @@ function Footer() {
                 <div className="footer__block">
                     <div className="footer__block-name">Newsletter</div>
                     <div className="footer__block-links">
-                        <div className="footer__block-info">Keep up with our latest news and events. Subscribe to our newsletter!</div>
+                        <div className="footer__block-info">Keep up with our latest news and events. Subscribe to our
+                            newsletter!
+                        </div>
                         <div className="footer__input-container">
                             <input type="email"
                                    placeholder="example@gmail.com"
@@ -47,7 +49,7 @@ function Footer() {
                             <button
                                 type="submit"
                                 className="footer__btn">
-                                <CarbonSendAlt className="footer__send-icon" />
+                                <CarbonSendAlt className="footer__send-icon"/>
                             </button>
                         </div>
                     </div>
@@ -56,12 +58,11 @@ function Footer() {
             <div className="copyright">
                 <div className="copyright__text">Copyright ©2022 All rights reserved</div>
                 <div className="copyright__links">
-                    <a className="copyright__link" href="https://github.com/valeryadt"><EiScGithub /></a>
-                    <a className="copyright__link"><EiScLinkedin /></a>
-                    <a className="copyright__link"><EiScVk /></a>
-                    <a className="copyright__link"><EiScTelegram /></a>
-                    <a className="copyright__link"><EiScYoutube /></a>
-
+                    <a className="copyright__link" href="https://github.com/valeryadt"><EiScGithub/></a>
+                    <a className="copyright__link"><EiScLinkedin/></a>
+                    <a className="copyright__link"><EiScVk/></a>
+                    <a className="copyright__link"><EiScTelegram/></a>
+                    <a className="copyright__link"><EiScYoutube/></a>
                 </div>
             </div>
         </div>
