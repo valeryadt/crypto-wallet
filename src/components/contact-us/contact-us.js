@@ -1,6 +1,6 @@
 import './contact-us.css';
 import Btn from "../header/btn/btn";
-import {useRef} from "react";
+import {useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
 import IonMdMail from "./icones/IonMdMail";
 import MdiPhone from "./icones/MdiPhone";
@@ -8,18 +8,22 @@ import Fa6SolidLocationDot from "./icones/Fa6SolidLocationDot";
 import EiScGithub from "../footer/icones/EiScGithub";
 import EiScTelegram from "../footer/icones/EiScTelegram";
 import EiScVk from "../footer/icones/EiScVk";
+import ModalDialog from "../modal-dialog/modal-dialog";
 
 function ContactUs() {
     const form = useRef()
+    let [isOpen, setIsOpen] = useState(false)
+
     const sendEmail = (e) => {
         e.preventDefault();
 
         emailjs.sendForm('service_i886d0q', 'template_b5at35s', form.current, 'pM9BRHcFNth4cLk76')
             .then((result) => {
-                console.log(result.text);
+                console.log(result.text)
             }, (error) => {
                 console.log(error.text);
             });
+        setIsOpen(!isOpen)
         e.target.reset()
     };
 
@@ -66,34 +70,46 @@ function ContactUs() {
                             placeholder="Your text here...">
                         </textarea>
                         <div className="contact__btn-container">
-                            <Btn text="Send message" styling="btn login contact__btn" type="submit"/>
+                            <Btn text="Send message"
+                                 styling="btn login contact__btn"
+                                 type="submit"
+                            />
                         </div>
+                        <ModalDialog isOpen={isOpen} setIsOpen={setIsOpen}/>
                     </form>
                 </div>
                 <div className="contact__description-container">
                     <div className="contact__title">
                         Contact us
                         <div className="contact__description">
-                            <div className="contact__form-text">Our friendly team would love to hear from you!</div>
+                            <div className="contact__form-text">
+                                Our friendly team would love to hear from you!
+                            </div>
                         </div>
                     </div>
                     <div className="contact__information">
                         <div className="contact__icon-container">
                             <IonMdMail className="contact__icon"/>
-                            <div className="contact__information-text">finvers.company@yandex.ru</div>
+                            <div className="contact__information-text">
+                                finvers.company@yandex.ru
+                            </div>
                         </div>
                         <div className="contact__icon-container">
                             <MdiPhone className="contact__icon"/>
-                            <div className="contact__information-text">+7 900 000 00 00</div>
+                            <div className="contact__information-text">
+                                +7 900 000 00 00
+                            </div>
                         </div>
                         <div className="contact__icon-container">
                             <Fa6SolidLocationDot className="contact__icon"/>
-                            <div className="contact__information-text">Moscow, Russia</div>
+                            <div className="contact__information-text">
+                                Moscow, Russia
+                            </div>
                         </div>
                     </div>
                     <div className="contact__sm-container">
                         <div className="contact__sm">
-                            <a className="contact__sm-link">
+                            <a className="contact__sm-link" href="https://github.com/valeryadt">
                                 <EiScGithub className="contact__sm-icon"/>
                             </a>
                         </div>
