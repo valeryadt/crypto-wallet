@@ -6,6 +6,7 @@ import EiScTelegram from "./icones/EiScTelegram";
 import EiScYoutube from "./icones/EiScYoutube";
 import Logotype from "../logotype/logotype";
 import CarbonSendAlt from "./icones/CarbonSendAlt";
+import {Link} from "react-router-dom"
 
 function Footer() {
     return (
@@ -29,11 +30,29 @@ function Footer() {
                 <div className="footer__block">
                     <div className="footer__block-name">Fast Links</div>
                     <div className="footer__block-links">
-                        <div className="footer__block-link"><a href="#">Home</a></div>
-                        <div className="footer__block-link"><a href="#">Contact Us</a></div>
-                        <div className="footer__block-link"><a href="#">Cryptocurrencies</a></div>
-                        <div className="footer__block-link"><a href="#">Crypto News</a></div>
-                        <div className="footer__block-link"><a href="#">My Account</a></div>
+                        <div className="footer__block-link">
+                            <Link to="/">
+                                Home
+                            </Link>
+                        </div>
+                        <div className="footer__block-link">
+                            <Link to="/contact">
+                                Contact Us
+                            </Link>
+                        </div>
+                        <div className="footer__block-link">
+                            <Link to="/cryptocurrencies">
+                                Cryptocurrencies
+                            </Link>
+                        </div>
+                        <div className="footer__block-link">
+                            <Link to="/cryptonews">
+                                Crypto News
+                            </Link>
+                        </div>
+                        <div className="footer__block-link">
+                            <a href="#">My Account</a>
+                        </div>
                     </div>
                 </div>
                 <div className="footer__block">

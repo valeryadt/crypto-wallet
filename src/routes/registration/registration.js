@@ -1,5 +1,7 @@
 import './registration.css'
-import Btn from "../header/btn/btn";
+import Btn from "../../components/header/btn/btn";
+import {Link} from "react-router-dom"
+
 
 function Registration() {
     return (
@@ -34,7 +36,9 @@ function Registration() {
                     <Btn text="Sign up" styling="btn login registry__btn"/>
                 </div>
                 <div className="registry__router">
-                    <p>Already have an account? <a href="#" className="registry__link">Login now!</a></p>
+                    <p>Already have an account?
+                        <Link to="/authorization" className="registry__link">Login now!</Link>
+                    </p>
                 </div>
             </div>
             <div className="registry__container">

@@ -1,6 +1,8 @@
 import './home-page.css';
 import Btn from "../../components/header/btn/btn";
 import CurrencyBlock from "./currency-block/currency-block";
+import {Link} from "react-router-dom"
+
 
 function HomePage(props) {
 
@@ -13,7 +15,9 @@ function HomePage(props) {
                     <p className="about__text-description">Easy way to buy, use and sell your crypto</p>
                 </div>
                 <div className="about__btn">
-                    <Btn text="Try it!" styling="btn start home__btn"/>
+                   <Link to="/registration">
+                       <Btn text="Try it!" styling="btn start home__btn"/>
+                   </Link>
                 </div>
             </div>
             <div className="home__currencies">

@@ -47,7 +47,7 @@
 }
 
 .registry__link {
-    @apply hover:text-perfect-blue font-bold transition duration-500
+    @apply hover:text-perfect-blue font-bold transition duration-500 ml-1
 }
 
 .registry__img {

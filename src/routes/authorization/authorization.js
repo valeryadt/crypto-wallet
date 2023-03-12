@@ -1,6 +1,7 @@
 import './authorization.css';
-import Logotype from "../logotype/logotype";
-import Btn from "../header/btn/btn";
+import Logotype from "../../components/logotype/logotype";
+import Btn from "../../components/header/btn/btn";
+import {Link} from "react-router-dom"
 
 function Authorization() {
     return (
@@ -24,7 +25,11 @@ function Authorization() {
                     <Btn text="Sign in" styling="btn login auth__btn"/>
                 </div>
                 <div className="auth__router">
-                    <p>Don't have an account? <a href="#" className="auth__link">Register now!</a></p>
+                    <p>Don't have an account?
+                        <Link to="/registration" className="auth__link">
+                            Register now!
+                        </Link>
+                    </p>
                 </div>
             </div>
             <div className="auth__container">

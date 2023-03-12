@@ -7,8 +7,8 @@ import axios from "axios";
 import {useState, useEffect} from "react";
 import Cryptocurrencies from "../cryptocurrencies/cryptocurrencies";
 import CryptoNews from "../crypto-news/crypto-news";
-import Authorization from "../authorization/authorization";
-import Registration from "../registration/registration";
+import Authorization from "../../routes/authorization/authorization";
+import Registration from "../../routes/registration/registration";
 import ContactUs from "../contact-us/contact-us";
 
 function App() {
@@ -52,12 +52,14 @@ function App() {
     return (
         <div className="App">
             <Header />
-            {/*<HomePage coins={coins} />*/}
-            <ContactUs />
-            {/*<CryptoNews news={news} />*/}
-            {/*<Cryptocurrencies coins={coins} trending={trending} />*/}
-            {/*<Registration />*/}
-            {/*<Authorization />*/}
+            <Routes>
+                <Route path="/" element={<HomePage coins={coins} />} />
+                <Route path="/contact" element={<ContactUs />}/>
+                <Route path="cryptocurrencies" element={<Cryptocurrencies coins={coins} trending={trending} />} />
+                <Route path="/cryptonews" element={<CryptoNews news={news} />} />
+                <Route path="/registration" element={<Registration />} />
+                <Route path="/authorization" element={<Authorization />} />
+            </Routes>
             <Footer/>
         </div>
     )
