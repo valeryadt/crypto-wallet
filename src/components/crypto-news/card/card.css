@@ -11,7 +11,7 @@
 }
 
 .card__img {
-    @apply rounded-lg w-80 h-40
+    @apply rounded-lg w-full h-40
 }
 
 .card__btn {

@@ -2,6 +2,7 @@ import './trending.css';
 import TrendingCard from "./trending-card/trending-card";
 
 function Trending(props) {
+    // console.log(props.trending)
     return (
         <div className="trending">
             <div className="trending__container">
@@ -13,7 +14,7 @@ function Trending(props) {
                     This list is sorted by coins that are most searched for in the last 3 hours.
                 </div>
                 <div className="trending__cards">
-                    {props.trending.coins !== undefined && props.trending.coins.map((trending, idx) => {
+                    { props.trending.coins !== undefined && props.trending.coins.map((trending, idx) => {
                         return (
                             <TrendingCard {...trending} key={idx}/>
                         )

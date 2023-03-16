@@ -10,6 +10,7 @@ import CryptoNews from "../crypto-news/crypto-news";
 import Authorization from "../../routes/authorization/authorization";
 import Registration from "../../routes/registration/registration";
 import ContactUs from "../contact-us/contact-us";
+import TrendingItem from "../cryptocurrencies/trending/trending-item/trending-item";
 
 function App() {
 
@@ -55,10 +56,13 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage coins={coins} />} />
                 <Route path="/contact" element={<ContactUs />}/>
-                <Route path="cryptocurrencies" element={<Cryptocurrencies coins={coins} trending={trending} />} />
+                <Route path="/cryptocurrencies" element={<Cryptocurrencies coins={coins} trending={trending} />} />
                 <Route path="/cryptonews" element={<CryptoNews news={news} />} />
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/authorization" element={<Authorization />} />
+                <Route path="/cryptocurrencies/:coinId" element={<TrendingItem />}>
+                    <Route path=":coinId" />
+                </Route>
             </Routes>
             <Footer/>
         </div>

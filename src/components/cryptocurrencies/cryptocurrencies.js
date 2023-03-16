@@ -40,6 +40,8 @@ function Cryptocurrencies(props) {
         }
     };
 
+    // console.log(props.trending)
+
     return (
         <div className="cryptocurrencies">
             <div className="cryptocurrencies__container">

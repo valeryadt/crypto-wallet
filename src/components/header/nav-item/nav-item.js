@@ -1,17 +1,27 @@
 import './nav-item.css'
 import {useState} from "react";
+import {Link} from "react-router-dom"
 
-function NavItem({name}) {
 
-    const [activeState, setActiveState] = useState(false);
-    function handleClick(e) {
-        setActiveState(prevState => !prevState)
-    }
+function NavItem({name, link, styling}) {
+
+    // const [isActive, setIsActive] = useState(false);
+    // function handleClick(e) {
+    //     console.log(active)
+    //     setActive(prevState => !prevState)
+    // }
+    // console.log(styling, 'style')
+    // function handleMobileMenuToggle() {
+    //     setIsActive(!isActive)
+    //     console.log('click')
+    // }
 
     return (
-        <div className={`nav__item ${activeState ? 'nav__item__active' : ''}`} onClick={handleClick}>
-           <p className="nav__item-name">{name}</p>
-        </div>
+        <Link to={link}>
+           <li className={styling}>
+               <p className="nav__item-name">{name}</p>
+           </li>
+        </Link>
     )
 }
 

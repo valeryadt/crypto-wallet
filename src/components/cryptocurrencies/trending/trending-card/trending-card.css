@@ -3,7 +3,7 @@
 }
 
 .trending-card__info {
-    @apply  flex-col gap-3 w-full items-start text-left justify-center
+    @apply  flex-col gap-3 w-sm items-start text-left justify-center
 }
 
 .trending-card__img {
@@ -11,7 +11,7 @@
 }
 
 .trending-card__info-name {
-    @apply text-xl font-bold
+    @apply text-xl font-bold text-ellipsis truncate
 }
 
 .trending-card__info-symbol {

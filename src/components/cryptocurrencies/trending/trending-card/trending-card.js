@@ -1,11 +1,14 @@
 import './trending-card.css';
 import CryptocurrencyColorBtc from "./icon/CryptocurrencyColorBtc";
+import { Link } from "react-router-dom"
+
+
 
 function TrendingCard(props) {
-    const {small, name, symbol, price_btc, market_cap_rank, score} = props.item
-    console.log(props)
+    const {small, name, symbol, price_btc, market_cap_rank, score, id} = props.item
+
     return (
-        <a href="src/components/cryptocurrencies/trending/trending-card#">
+        <Link to={`/cryptocurrencies/${id}`}>
             <div className="trending-card">
                 <div className="trending-card__info">
                     <div className="trending-card__img-container">
@@ -21,7 +24,7 @@ function TrendingCard(props) {
                 <div className="trending-card__price-info">
                     <div className="trending-card__price">
                         <CryptocurrencyColorBtc/>
-                        {price_btc.toFixed(8)}
+                        {( price_btc && price_btc.toFixed(8)) || "no data" }
                     </div>
                     <div className="trending-card__mrkt-cap">
                         Mrkt Cap Rank : {market_cap_rank}
@@ -31,7 +34,7 @@ function TrendingCard(props) {
                     </div>
                 </div>
             </div>
-        </a>
+         </Link>
     )
 }
 
