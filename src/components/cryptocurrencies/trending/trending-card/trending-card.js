@@ -27,7 +27,7 @@ function TrendingCard(props) {
                         {( price_btc && price_btc.toFixed(8)) || "no data" }
                     </div>
                     <div className="trending-card__mrkt-cap">
-                        Mrkt Cap Rank : {market_cap_rank}
+                        Mrkt Cap Rank : {market_cap_rank || 'no data'}
                     </div>
                     <div className="trending-card__score">
                         Score: {score}

@@ -15,7 +15,7 @@ function Card(props) {
     return (
         <div className="card">
             <div className="card__img-container">
-                <img crossorigin src={getImage(image)} alt="" className="card__img"/>
+                <img crossOrigin src={getImage(image)} alt="" className="card__img"/>
             </div>
             <div className="card__title" title={name}>
                 {name}
