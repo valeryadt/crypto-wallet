@@ -1,0 +1,23 @@
+.error {
+    @apply flex flex-row justify-between text-white
+}
+
+.error__info {
+    @apply flex flex-col justify-center gap-3 pt-10 items-start
+}
+
+.error__info-title {
+    @apply text-4xl font-extrabold text-left
+}
+
+.error__info-description {
+    @apply text-xl text-start pt-2 font-semibold
+}
+
+.error__btn-container {
+    @apply mt-4 flex flex-row gap-3 items-center justify-start
+}
+
+.error__btn {
+    @apply mt-4 transition ease-in-out delay-150 bg-light-blue hover:-translate-y-1 hover:scale-110 hover:bg-perfect-blue duration-300 border-none hover:shadow-lg hover:shadow-indigo-600/50
+}

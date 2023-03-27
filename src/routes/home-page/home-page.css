@@ -20,11 +20,12 @@
 }
 
 .about__text-title {
-    @apply text-4xl font-bold
+    @apply text-4xl font-extrabold
+
 }
 
 .about__text-description {
-    @apply text-xl font-bold text-start
+    @apply text-xl font-semibold
 }
 
 .home__currencies {

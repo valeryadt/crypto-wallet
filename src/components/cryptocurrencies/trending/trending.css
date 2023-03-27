@@ -3,11 +3,11 @@
 }
 
 .trending__title {
-    @apply text-4xl font-bold text-left
+    @apply text-4xl font-extrabold text-left
 }
 
 .trending__description {
-    @apply text-left text-lg text-white/70
+    @apply text-left text-xl text-white/70 font-semibold
 }
 
 .trending__cards {

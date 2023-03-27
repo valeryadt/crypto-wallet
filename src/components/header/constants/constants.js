@@ -6,18 +6,18 @@ export const navLinks = [
     },
     {
         id: 2,
-        name: "Contact Us",
-        linkTo: "/contact",
-    },
-    {
-        id: 3,
         name: "Cryptocurrencies",
         linkTo: "/cryptocurrencies",
     },
     {
-        id: 4,
+        id: 3,
         name: "Crypto News",
         linkTo: "/cryptonews",
+    },
+    {
+        id: 4,
+        name: "Contact Us",
+        linkTo: "/contact",
     },
 ];
 
