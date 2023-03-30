@@ -4,7 +4,6 @@
 
 .item {
     @apply  rounded-xl pt-4 pb-4 pl-6 pr-6 h-auto bg-dark-gray shadow-lg text-white flex flex-col gap-2
-
 }
 
 .item__panel {
@@ -13,4 +12,8 @@
 
 .item__img {
     @apply rounded-full
+}
+
+.load {
+    @apply  rounded-xl pt-10 pb-10 pl-6 pr-6 h-auto bg-dark-gray shadow-lg text-white/70 flex flex-col gap-5 justify-center items-center
 }

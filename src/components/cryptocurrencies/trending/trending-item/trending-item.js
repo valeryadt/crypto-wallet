@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom';
 import {Link} from "react-router-dom";
+import {Chart, BarElement, CategoryScale, LinearScale, Tooltip, Legend} from 'chart.js'
+import {Bar} from "react-chartjs-2";
 import axios from "axios"
 import './trending-item.css'
 import BxLinkExternal from "./icones/BxLinkExternal";
@@ -15,17 +17,17 @@ import JamCode from "./icones/JamCode";
 import CiSearchMagnifyingGlass from "./icones/CiSearchMagnifyingGlass";
 import MaterialSymbolsForumOutline from "./icones/MaterialSymbolsForumOutline";
 import IcRoundPerson from "./icones/IcRoundPerson";
-import ErrorPage from "../../../error-page/error-page";
 import IconBxsUpArrow from "./icones/IconBxsUpArrow";
 import RiTwitterFill from "./icones/RiTwitterFill";
 import EiScTelegram from "../../../footer/icones/EiScTelegram";
+import Loader from "../../../loader/loader";
 
 function TrendingItem(props) {
 
     const [coins, setCoins] = useState([])
+    const [open, setOpen] = useState(false)
     const params = useParams()
     const [loading, setLoading] = useState(false)
-    const [open, setOpen] = useState(false)
 
 
     const url = `https://api.coingecko.com/api/v3/coins/${params.coinId}?localization=false&sparkline=true`
@@ -51,7 +53,39 @@ function TrendingItem(props) {
         setOpen(open => !open)
     }
 
-    console.log(coins.links)
+    Chart.register(
+        BarElement,
+        CategoryScale,
+        LinearScale,
+        Tooltip,
+        Legend
+    )
+
+    const slicedArray = coins.market_data?.sparkline_7d.price ? coins.market_data?.sparkline_7d.price.slice(coins.market_data?.sparkline_7d.price.length - 14) : null;
+
+    const data = {
+        labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+        datasets: [
+            {
+                label: coins.name,
+                data: slicedArray || [1, 2, 3],
+                backgroundColor: 'rgba(201, 203, 207, 0.2)',
+                borderColor: 'rgb(201, 203, 207)',
+                borderWidth: 1,
+            },
+        ]
+    }
+
+    const options = {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: false,
+                min: Number(Math.min(data.datasets[0].data)).toFixed(2),
+                max: Number(Math.max(data.datasets[0].data)).toFixed(2)
+            }
+        },
+    }
 
     return (
         <div className="item__container">
@@ -158,29 +192,41 @@ function TrendingItem(props) {
                                                                                        className="text-white/60 text-lg cursor-pointer"/>}
                                             </div>
                                             {open ?
-                                                <div className="flex flex-col z-100 top-4 mt-0.5 w-48 absolute">
-                                                    <div className="flex justify-center items-center">
-                                                        <IconBxsUpArrow className="text-stone"  /></div>
-                                                    <div className="bg-stone text-white/50 shadow-lg shadow-black/30 rounded-md">
-                                                        {coins.links.twitter_screen_name ? <div className="hover:text-white transition p-1 flex flex-row gap-1 items-center justify-start">
-                                                            <RiTwitterFill /> Twitter @{coins.links.twitter_screen_name}
-                                                        </div> : null}
-                                                        {coins.links.telegram_channel_identifier ?  <div className="hover:text-white transition p-1 flex flex-row gap-1 items-center justify-start">
-                                                            <EiScTelegram /> {coins.links.telegram_channel_identifier}</div> : null}
+                                                <div className="flex flex-col z-100 top-5 w-full absolute">
+                                                    <div className="flex justify-center items-start">
+                                                        <IconBxsUpArrow className="text-stone"/>
+                                                    </div>
+                                                    <div
+                                                        className="bg-stone rounded-md shadow-lg shadow-black/30 divide-y divide-white/10">
+                                                        <div className="text-white/50">
+                                                            {coins.links.twitter_screen_name ?
+                                                                (<div
+                                                                    className="hover:text-white transition p-2 flex flex-row gap-1 items-center justify-start">
+                                                                    <RiTwitterFill/> {coins.links.twitter_screen_name}
+                                                                </div>) : null}
+                                                        </div>
+                                                        <div className="text-white/50">
+                                                            {coins.links.telegram_channel_identifier ?
+                                                                (<div
+                                                                    className="hover:text-white text-xs transition p-2 flex flex-row gap-1 items-center justify-start">
+                                                                    <EiScTelegram/> {coins.links.telegram_channel_identifier}
+                                                                </div>) : null}
+                                                        </div>
                                                     </div>
                                                 </div> : null}
                                         </div>
                                     </div>
 
                                 </div>
-                                <div className="flex flex-col items-start">
+                                {coins.contract_address ? <div className="flex flex-col items-start">
                                     <div className="text-xs font-bold p-1">Contracts:</div>
                                     <div
                                         className="flex cursor-default bg-white/20 rounded-md text-white/50 flex-row gap-1 p-1 items-center justify-center text-xs font-bold">
                                         {coins.contract_address.slice(0, 7) + '...' + coins.contract_address.slice(35)}
-                                        <RadixIconsCopy className="cursor-pointer"/>
+                                        <RadixIconsCopy className="cursor-pointer"
+                                                        onClick={() => navigator.clipboard.writeText(coins.contract_address)}/>
                                     </div>
-                                </div>
+                                </div> : null}
                             </div>
                         </div>
                         <div className="item__info-price flex flex-col justify-start gap-1 items-start">
@@ -201,10 +247,14 @@ function TrendingItem(props) {
                                 <p>{coins.market_data?.current_price.eth} ETH</p>
                             </div>
                             <div className="flex flex-row gap-2 font-semibold">
-                                <div className="text-green-600/80">High
-                                    ${coins.market_data.high_24h.usd.toLocaleString()}</div>
-                                <div className="text-red-600/80">Low
-                                    ${coins.market_data.low_24h.usd.toLocaleString()}</div>
+                                High
+                                <div className="text-green-600/80">
+                                    ${coins.market_data.high_24h.usd.toLocaleString()}
+                                </div>
+                                Low
+                                <div className="text-red-600/80">
+                                    ${coins.market_data.low_24h.usd.toLocaleString()}
+                                </div>
                             </div>
                         </div>
                         <div className="item__info-actions flex flex-row gap-3 justify-start items-start">
@@ -219,13 +269,38 @@ function TrendingItem(props) {
                             </div>
                         </div>
                     </div>
+                    <div className="flex flex-row gap-2">
+                        <div className="w-1/2">
+                            {data ? (
+                                <Bar data={data} options={options}></Bar>
+                            ) : <Loader/>}
+                        </div>
+                        <div className="grid grid-cols-2 grid-rows-2 gap-3 w-1/2">
+                            <div className="border">d</div>
+                            <div className="border">b</div>
+                            <div className="border">d</div>
+                            <div className="border">b</div>
+                        </div>
+                    </div>
                     <div className="item__description break-words text-justify w-full">
-                        About
-                        <p>{coins.description.en}</p>
+                        <h2 className="text-2xl font-extrabold">{coins.symbol.toUpperCase()} Price Live Data</h2>
+                        <p>The live <b>{coins.name} price today</b> is ${coins.market_data.current_price.usd} USD with a 24-hour trading volume of $138 523 098 USD. We update our {coins.symbol.toUpperCase()} to USD price in real-time.
+                            {coins.name} is down 3,06% in the last 24 hours. The current CoinMarketCap ranking is #330, with a live market cap of $73 274 271 USD. It has a circulating
+                            supply of 179 395 529 {coins.symbol.toUpperCase()} coins and a max. supply of 1 000 000 000 {coins.symbol.toUpperCase()} coins. If you would like to know where to buy {coins.name} at the current rate, the
+                            top cryptocurrency exchanges for trading in {coins.name} stock are currently Binance, OKX, Bybit, BTCEX, and CoinW. You can find others listed on our crypto
+                            exchanges page.</p>
+                    </div>
+                    <div className="item__description break-words text-justify w-full">
+                        <h2 className="text-2xl font-extrabold">About {coins.name} ({coins.symbol.toUpperCase()})</h2>
+                        <p className="whitespace-pre-wrap pt-2 tracking-wide text-lg text-white/70">{coins.description.en}</p>
                     </div>
                 </div>
             ) : (
-                <ErrorPage/>
+                // <ErrorPage/>
+                <div className="load">
+                    <h1 className="font-semibold text-xl">Getting everything ready. Please be patient.</h1>
+                    <Loader/>
+                </div>
             )}
         </div>
     )

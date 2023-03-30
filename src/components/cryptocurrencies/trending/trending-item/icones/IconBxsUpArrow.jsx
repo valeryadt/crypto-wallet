@@ -2,7 +2,7 @@ import React from "react";
 export function IconBxsUpArrow(props) {
     return (
         <svg
-            viewBox="0 -12 23 24"
+            viewBox="0 -6 23 24"
             fill="currentColor"
             height="1em"
             width="1em"
