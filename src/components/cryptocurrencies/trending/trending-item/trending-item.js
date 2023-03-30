@@ -278,7 +278,7 @@ function TrendingItem(props) {
                         <div className="grid grid-cols-2 grid-rows-2 gap-3 w-1/2">
                             <div className="border">d</div>
                             <div className="border">b</div>
-                            <div className="border">d</div>
+                            <div className="border">e</div>
                             <div className="border">b</div>
                         </div>
                     </div>
